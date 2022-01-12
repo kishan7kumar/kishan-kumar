@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod=true --outputPath=docs --baseHref=https://kishankumar.in",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "mybuild":"ng build --prod=true --outputPath=docs --baseHref=https://kishankumar.in"
   },
   "private": true,
   "dependencies": {
