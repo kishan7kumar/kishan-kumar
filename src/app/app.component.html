@@ -1,4 +1,40 @@
-<p> site under work</p>
-<p> site under work</p>
-<p> site under work</p>
-<p> site under work</p>
+<div class="app-body-container">
+
+  <div class="navbar">
+    <div class="primary-section" routerLink="./home">
+      <div class="text-center mt-4">
+        <img class="profile-photo" src="assets/images/profile.JPG"/>
+      </div>
+      <div class="name mt-1">
+        Kishan Kumar
+      </div>
+      <div class="role mt-2 mb-3">
+        Software Developer <br>Mumbai, India
+      </div>
+    </div>
+
+    <div class="navigation-list">
+      <div class="tab" routerLink="./home" routerLinkActive="selected">Home</div>
+      <div class="tab disabled" routerLink="./education" routerLinkActive="selected">Education</div>
+      <div class="tab disabled" routerLink="./work" routerLinkActive="selected">Work</div>
+      <div class="tab disabled" routerLink="./skills" routerLinkActive="selected">Skills</div>
+      <div class="tab" routerLink="./contact" routerLinkActive="selected">Contact</div>
+    </div>
+    <div class="social-media-link">
+      <div (click)="redirect('linkedin')" class="icon">
+        <img src="assets/icons/linkedin.svg" />
+      </div>
+      <div (click)="redirect('linkedin')" class="icon">
+        <img src="assets/icons/github.svg" />
+      </div>
+      <div (click)="redirect('hackerrank')" class="icon">
+        <img src="assets/icons/hackerrank.svg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="app-router-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

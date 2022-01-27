@@ -1,0 +1,45 @@
+@mixin primary-button($color:'#09cfff') {
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border: 1px solid $color;
+  width: 220px;
+  color: #eeeeee;
+  letter-spacing: 3px;
+  position: relative;
+  outline: 0;
+  overflow: hidden;
+  background: none;
+  z-index: 1;
+  transition: 0.08s ease-in;
+  -o-transition: 0.08s ease-in;
+  -ms-transition: 0.08s ease-in;
+  -moz-transition: 0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+
+
+
+  &:hover {
+    color: black;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    background: $color;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -webkit-transition: top 0.09s ease-in;
+  }
+
+  &:hover:before {
+    top: 0;
+  }
+
+}

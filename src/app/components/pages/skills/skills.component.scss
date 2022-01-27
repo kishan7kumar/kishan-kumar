@@ -1,0 +1,27 @@
+@import '../../../constants/variables.scss';
+
+.skills-container {
+  height: 100%;
+  width: 100%;
+  padding: 40px 50px 30px 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #1d1d1d;
+
+  .code-text {
+    color: #616161;
+    font-family: $dancing-font;
+    font-size: 18px;
+    margin: 0;
+
+  }
+
+  .title {
+    font-size: 64px;
+    font-family: $bold-font;
+    color: #09cfff;
+    line-height: 60px;
+    letter-spacing: -2.5px;
+  }
+
+}
