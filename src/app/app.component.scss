@@ -1,10 +1,23 @@
 @import './constants/variables.scss';
 
 .app-body-container {
-  height: 100%;
-  width: 100%;
-  // background-color: #1d1d1d;
-  display: flex;
+  .mobile-menu {
+    background-color: #000;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;
+    top: 10px;
+    right: 10px;
+    .pi {
+      color: white;
+      font-size: 32px;
+    }
+    @media (max-width:1025px) {
+      display: block;
+      z-index: 3;
+    }
+  }
+
 
   .navbar {
     width: 130px;
@@ -13,13 +26,27 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
+    @media (max-width:1025px) {
+      display: none;
+    }
+
+    &.mobile-view {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+    }
 
     .primary-section {
       background-color: #000;
       cursor: pointer;
+
       &:hover {
         .profile-photo {
-          
+
           transform: scale(1.1);
         }
 
@@ -92,8 +119,9 @@
         &.selected {
           color: #09cfff;
         }
-        &.disabled{
-           cursor: not-allowed;
+
+        &.disabled {
+          cursor: not-allowed;
           pointer-events: none;
           color: #424242;
         }
@@ -115,6 +143,11 @@
         img {
           height: 22px;
           width: 22px;
+          @media (max-width:1025px) {
+            height: 30px;
+            width: 30px;
+            margin: 0px 6px;
+          }
           filter: invert(60%) sepia(0%) saturate(931%) hue-rotate(217deg) brightness(106%) contrast(88%);
         }
 
@@ -129,7 +162,6 @@
   .app-router-wrapper {
     flex-grow: 1;
     min-width: 0;
-    height: 100%;
   }
 }
 
