@@ -1,192 +1,97 @@
-@import '../../../constants/variables.scss';
-@import '../../../constants/mixins.scss';
+@import "../../../constants/variables.scss";
+@import "../../../constants/mixins.scss";
 
 .home-container {
   position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  padding: 20px 0px;
   background-color: #1d1d1d;
-
-
-
   #particles-js {
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #1d1d1d;
     z-index: 0;
   }
-
   .wrapper {
     z-index: 1;
-
+    width: 100%;
+    margin: auto 0px;
+    padding-left: 0px 30px;
+    @include for-tablet {
+      padding-left: 0px 10px;
+    }
     .title {
       padding-left: 20px;
-      @media (max-width:1025px) {
-       padding-left: 0;
+      @include for-medium-mobile {
+        padding-left: 0;
       }
-
       .intro-text {
         z-index: 10000;
-        padding-left: 25px;
+        margin-left: 25px;
         line-height: 80px;
         letter-spacing: -1px;
         font-size: 82px;
-        @media (max-width:1025px) {
-          display: none;
-        }
         font-family: $bold-font;
         color: white;
-        .blast {
-          display: inline-block;
-          transition: color ease-out 0.4s;
-
-          &:hover {
-            color: #09cfff;
-
-            animation: effect linear 0.5s;
-          }
-
-          &.gradient {
-            background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-animation: hue 10s infinite linear;
-          }
+        @include for-small-desktop {
+          font-size: 72px;
+          line-height: 70px;
+        }
+        @include for-tablet {
+          font-size: 8vw;
+          line-height: 8vw;
+        }
+        @include for-normal-mobile {
+          font-size: 36px;
+          line-height: 36px;
+        }
+        .gradient {
+          background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -webkit-animation: hue 10s infinite linear;
         }
       }
-
-      .intro-text-mobile {
-        display: none;
-        font-family: $bold-font;
-        color: white;
-        padding-left: 10px;
-        .blast {
-          transition: color ease-out 0.4s;
-          &:hover {
-            color: #09cfff;
-            animation: effect linear 0.5s;
-          }
-          &.gradient {
-            background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-animation: hue 10s infinite linear;
-          }
-        }
-        @media (max-width:1025px) {
-          display: block;
-          font-size: 10vw;
-          line-height: 10vw;
-        }
-      }
-
-      .code-text,
-      .code-text-2 {
-        color: #616161;
-        font-family: $dancing-font;
-        font-size: 18px;
-        margin: 0;
-      }
-
       .sub-title {
         font-family: $default-font;
         font-size: 16px;
         letter-spacing: 4px;
         color: #9e9e9e;
         margin-left: 24px;
-
-        @media (max-width:1025px) {
+        @include for-normal-mobile {
+          font-size: 14px;
           letter-spacing: normal;
-          margin-left: 10px;
+        }
+        @include for-tablet {
+          letter-spacing: normal;
         }
       }
     }
-
     .code-text {
       color: #616161;
       font-family: $dancing-font;
       font-size: 18px;
-      margin: 0;
+      margin: 10px 0px 0px 10px;
+      @include for-normal-mobile {
+        font-size: 14px;
+      }
     }
-
-
-    .contact-button {
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50px;
-      border: 1px solid #09cfff;
-      width: 220px;
-      margin-left: 44px;
-
-      @media (max-width:1025px) {
+    .contact-me-button {
+      margin-left: 24px;
+      @include primary-button(#75bef8);
+      @include for-normal-mobile {
         width: 170px;
         height: 40px;
-        margin-left: 10px;
       }
-
-      color: #eeeeee;
-      letter-spacing: 3px;
-      position: relative;
-      outline: 0;
-      overflow: hidden;
-      background: none;
-      z-index: 1;
-      transition: 0.08s ease-in;
-      -o-transition: 0.08s ease-in;
-      -ms-transition: 0.08s ease-in;
-      -moz-transition: 0.08s ease-in;
-      -webkit-transition: 0.08s ease-in;
-
     }
-
-    .fill:hover {
-      color: black;
-    }
-
-    .fill:before {
-      content: "";
-      position: absolute;
-      background: #09cfff;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      top: 100%;
-      z-index: -1;
-      -webkit-transition: top 0.09s ease-in;
-    }
-
-    .fill:hover:before {
-      top: 0;
-
-    }
-
-
   }
 }
-
-
-@keyframes effect {
-  0% {
-    transform: scale(1, 1);
-  }
-
-  25% {
-    transform: scale(1.3, 0.6);
-  }
-
-  50% {
-    transform: scale(1.1, 0.9);
-  }
-
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-
 @keyframes hue {
   from {
     -webkit-filter: hue-rotate(0deg);

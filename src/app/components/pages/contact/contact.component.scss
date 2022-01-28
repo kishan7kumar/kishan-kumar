@@ -1,56 +1,111 @@
-@import '../../../constants/variables.scss';
-@import '../../../constants/mixins.scss';
+@import "../../../constants/variables.scss";
+@import "../../../constants/mixins.scss";
 
 .contact-container {
   background-color: #1d1d1d;
-  .code-text {
-    color: #616161;
-    font-family: $dancing-font;
-    font-size: 18px;
-    margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  .wrapper {
+    margin: auto 0px;
+    padding: 20px 20px 20px 20px;
+    width: 60%;
+    @include for-small-desktop {
+      width: 80%;
+    }
+    @include for-normal-mobile {
+      width: 100%;
+    }
+    .code-text {
+      color: #616161;
+      font-family: $dancing-font;
+      font-size: 18px;
+      margin: 10px 0px 0px 20px;
+      &.html-tag {
+        margin-left: 0;
+      }
+    }
 
-  }
-  .title {
-    font-size: 64px;
-    font-family: $bold-font;
-    color: #09cfff;
-    line-height: 60px;
-    letter-spacing: -2.5px;
-  }
+    .title {
+      font-size: 64px;
+      font-family: $bold-font;
+      color: #75bef8;
+      line-height: 60px;
+      letter-spacing: -2.5px;
+      margin-left: 25px;
+      margin-top: 4px;
+      @include for-normal-mobile {
+        font-size: 48px;
+      }
+      @include for-small-mobile {
+        font-size: 42px;
+      }
+    }
 
-  .description {
-    font-size: 16px;
-    color: #e0e0e0;
-  }
-
-  .form-container {
-    .name-field {
-      background-color: #2b2b2b;
-      color: #8d8d8d;
-      height: 50px;
+    .description {
       font-size: 16px;
-      font-family: $default-font;
-      padding: 0px 20px;
+      color: #e0e0e0;
+      margin-left: 25px;
+      margin-top: 10px;
+      @include for-normal-mobile {
+        font-size: 14px;
+      }
+    }
 
-      &:focus {
-        box-shadow: none;
+    .form-container {
+      .name-field {
+        background-color: #2b2b2b;
+        color: #8d8d8d;
+        height: 50px;
+        font-size: 16px;
+        font-family: $default-font;
+        padding: 0px 20px;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
 
+    .button-container {
+      display: flex;     
+      margin-left: 25px;
+      margin-top: 10px;
+      @include for-normal-mobile {
+        flex-direction: column;        
+      }
+      .contact-button {
+        &.linkedin {
+          @include primary-button(#09cfff);
+          @include for-tablet {
+            width: 170px;
+            height: 40px;
+          }
+        }
+        &.github {
+          margin-left: 16px;
+          @include primary-button(#ffa726);
+          @include for-tablet {
+            width: 170px;
+            height: 40px;
+          }
+          @include for-normal-mobile {
+            margin: 10px 0px 0px 0px;
+          }
+        }
+        &.hackerrank {
+          margin-left: 16px;
+          @include primary-button(#aed581);
+          @include for-tablet {
+            width: 170px;
+            height: 40px;
+          }
+          @include for-normal-mobile {
+            margin: 10px 0px 0px 0px;
+          }
+        }
       }
     }
   }
-
-  .contact-button {
-    &.github{
-      @include primary-button(#ffa726);
-    }
-    &.linkedin{
-      @include primary-button(#09cfff);
-    }
-    &.hackerrank{
-      @include primary-button(#aed581);
-    }
-    
-  }
-
-
 }

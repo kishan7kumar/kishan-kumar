@@ -1,5 +1,34 @@
-@mixin primary-button($color:'#09cfff') {
+@mixin for-small-desktop {
+  @media (max-width: 1025px) {
+    @content;
+  }
+}
 
+@mixin for-tablet {
+  @media (max-width: 769px) {
+    @content;
+  }
+}
+
+@mixin for-normal-mobile {
+  @media (max-width: 426px) {
+    @content;
+  }
+}
+
+@mixin for-medium-mobile {
+  @media (max-width: 376px) {
+    @content;
+  }
+}
+
+@mixin for-small-mobile {
+  @media (max-width: 321px) {
+    @content;
+  }
+}
+
+@mixin primary-button($color: "#09cfff") {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -19,13 +48,9 @@
   -ms-transition: 0.08s ease-in;
   -moz-transition: 0.08s ease-in;
   -webkit-transition: 0.08s ease-in;
-
-
-
   &:hover {
     color: black;
   }
-
   &:before {
     content: "";
     position: absolute;
@@ -41,5 +66,22 @@
   &:hover:before {
     top: 0;
   }
+}
 
+@keyframes effect {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(1.3, 0.6);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
 }

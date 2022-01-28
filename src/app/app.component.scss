@@ -1,6 +1,11 @@
-@import './constants/variables.scss';
+@import "./constants/variables.scss";
+@import "./constants/mixins.scss";
 
 .app-body-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  display: flex;
   .mobile-menu {
     background-color: #000;
     border-radius: 8px;
@@ -12,12 +17,11 @@
       color: white;
       font-size: 32px;
     }
-    @media (max-width:1025px) {
+    @include for-small-desktop {
       display: block;
       z-index: 3;
     }
   }
-
 
   .navbar {
     width: 130px;
@@ -26,7 +30,7 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    @media (max-width:1025px) {
+    @include for-small-desktop {
       display: none;
     }
 
@@ -43,13 +47,10 @@
     .primary-section {
       background-color: #000;
       cursor: pointer;
-
       &:hover {
         .profile-photo {
-
           transform: scale(1.1);
         }
-
       }
 
       .profile-photo {
@@ -60,39 +61,11 @@
         border: 2px solid #9e9e9e;
       }
 
-      .blast {
-        display: inline-block;
-        transition: color ease-out 0.4s;
-        font-size: 82px;
-        font-family: $bold-font;
-        color: white;
-        line-height: 80px;
-
-        &.gradient {
-          background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          -webkit-animation: hue 10s infinite linear;
-        }
-      }
-
-      .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px 0px 10px 0px;
-
-        .image {
-          height: 64px;
-          width: 64px;
-        }
-      }
-
       .name {
         color: #fff;
         font-size: 16px;
         text-align: center;
-        font-family: $default-font
+        font-family: $default-font;
       }
 
       .role {
@@ -113,11 +86,11 @@
 
         &:hover {
           transition: color ease-in 0.3s;
-          color: #09cfff;
+          color: #75bef8;
         }
 
         &.selected {
-          color: #09cfff;
+          color: #75bef8;
         }
 
         &.disabled {
@@ -135,44 +108,28 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-
       .icon {
         cursor: pointer;
         margin: 0px 4px;
-
         img {
           height: 22px;
           width: 22px;
-          @media (max-width:1025px) {
+          @media (max-width: 1025px) {
             height: 30px;
             width: 30px;
             margin: 0px 6px;
           }
           filter: invert(60%) sepia(0%) saturate(931%) hue-rotate(217deg) brightness(106%) contrast(88%);
         }
-
         &:hover {
           filter: invert(55%) sepia(66%) saturate(1002%) hue-rotate(161deg) brightness(106%) contrast(110%);
         }
-
       }
     }
   }
-
   .app-router-wrapper {
     flex-grow: 1;
     min-width: 0;
   }
 }
 
-
-
-@keyframes hue {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-  }
-
-  to {
-    -webkit-filter: hue-rotate(-360deg);
-  }
-}

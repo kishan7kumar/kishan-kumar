@@ -1,5 +1,4 @@
-<div class="app-body-container flex w-full h-full relative">
-
+<div class="app-body-container">
   <div class="navbar">
     <div class="primary-section" routerLink="./home">
       <div class="text-center pt-4">
@@ -60,7 +59,7 @@
       <div (click)="redirect('linkedin')" class="icon">
         <img src="assets/icons/linkedin.svg" />
       </div>
-      <div (click)="redirect('linkedin')" class="icon">
+      <div (click)="redirect('github')" class="icon">
         <img src="assets/icons/github.svg" />
       </div>
       <div (click)="redirect('hackerrank')" class="icon">
@@ -76,7 +75,5 @@
   <div (click)="handleMenuBarClick()" class="mobile-menu absolute pt-2 pb-1 px-2">
     <i class="pi" [class.pi-bars]="!showMenu" [class.pi-times]="showMenu"></i>
   </div>
-
-
 
 </div>

@@ -12,14 +12,16 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  redirect(website:any){
-    if (website==='linkedin'){
+  redirect(website: any) {
+    if (website === 'linkedin') {
       window.location.href = "https://www.linkedin.com/in/kishankumar3202";
     }
-    if (website==='github'){
+    if (website === 'github') {
       window.location.href = "https://github.com/kishan7kumar";
     }
-   
+    if (website === 'hackerrank') {
+      window.location.href = "https://www.hackerrank.com/kishankumar3202";
+    }
   }
 
 }
