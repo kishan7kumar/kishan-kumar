@@ -26,6 +26,9 @@
       &.html-tag {
         margin-left: 0;
       }
+      @include for-normal-mobile {
+        margin-left: 0px;
+      }
     }
 
     .title {
@@ -34,10 +37,11 @@
       color: $blue-light;
       line-height: 60px;
       letter-spacing: -2.5px;
-      margin-left: 25px;
+      margin-left: 35px;
       margin-top: 4px;
       @include for-normal-mobile {
         font-size: 48px;
+        margin-left: 35px;
       }
       @include for-small-mobile {
         font-size: 42px;
@@ -47,9 +51,13 @@
     .description {
       font-size: 16px;
       color: $text-light;
-      margin-left: 25px;
+      margin-left: 35px;
       margin-top: 10px;
       @include for-normal-mobile {
+        font-size: 16px;
+        margin-left: 35px;
+      }
+      @include for-small-mobile {
         font-size: 14px;
       }
     }
@@ -70,7 +78,10 @@
 
     .button-container {
       display: flex;     
-      margin-left: 25px;
+      margin-left: 35px;
+      @include for-normal-mobile {
+        margin-left: 35px;
+      }
       margin-top: 10px;
       @include for-normal-mobile {
         flex-direction: column;        
@@ -80,7 +91,7 @@
           @include primary-button($blue-light);
           @include for-tablet {
             width: 170px;
-            height: 40px;
+            height: 44px;
           }
         }
         &.github {
@@ -88,10 +99,10 @@
           @include primary-button($orange-light);
           @include for-tablet {
             width: 170px;
-            height: 40px;
+            height: 44px;
           }
           @include for-normal-mobile {
-            margin: 10px 0px 0px 0px;
+            margin: 16px 0px 0px 0px;
           }
         }
         &.hackerrank {
@@ -99,10 +110,10 @@
           @include primary-button($green-light);
           @include for-tablet {
             width: 170px;
-            height: 40px;
+            height: 44px;
           }
           @include for-normal-mobile {
-            margin: 10px 0px 0px 0px;
+            margin: 16px 0px 0px 0px;
           }
         }
       }

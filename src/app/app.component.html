@@ -1,5 +1,5 @@
 <div class="app-body-container">
-  <div class="navbar">
+  <div class="navbar mobile-view" [class.showNavbar]="showMenu">
     <div class="primary-section" routerLink="./home">
       <div class="text-center pt-4">
         <img class="profile-photo" src="assets/images/profile.JPG" />
@@ -13,61 +13,28 @@
     </div>
 
     <div class="navigation-list">
-      <div class="tab" routerLink="./home" routerLinkActive="selected">
+      <div class="tab" routerLink="./home" (click)="handleTabClick()" routerLinkActive="selected">
         Home</div>
-      <div class="tab disabled" routerLink="./education" routerLinkActive="selected">Education</div>
-      <div class="tab disabled" routerLink="./work" routerLinkActive="selected">Work</div>
-      <div class="tab disabled" routerLink="./skills" routerLinkActive="selected">Skills</div>
-      <div class="tab" routerLink="./contact" routerLinkActive="selected">Contact</div>
+      <div class="tab disabled" (click)="handleTabClick()" routerLink="./education" routerLinkActive="selected">
+        Education</div>
+      <div class="tab disabled" routerLink="./work" (click)="handleTabClick()" routerLinkActive="selected">Work</div>
+      <div class="tab disabled" routerLink="./skills" (click)="handleTabClick()" routerLinkActive="selected">Skills
+      </div>
+      <div class="tab" routerLink="./contact" (click)="handleTabClick()" routerLinkActive="selected">
+        Contact</div>
     </div>
     <div class="social-media-link">
-      <div (click)="redirect('linkedin')" class="icon">
+      <div routerLink="https://www.linkedin.com/in/kishankumar3202" class="icon">
         <img src="assets/icons/linkedin.svg" />
       </div>
-      <div (click)="redirect('linkedin')" class="icon">
+      <div routerLink="https://github.com/kishan7kumar" class="icon">
         <img src="assets/icons/github.svg" />
       </div>
-      <div (click)="redirect('hackerrank')" class="icon">
+      <div routerLink="https://www.hackerrank.com/kishankumar3202" class="icon">
         <img src="assets/icons/hackerrank.svg" />
       </div>
     </div>
   </div>
-
-
-  <div class="navbar mobile-view" *ngIf="showMenu">
-    <div class="primary-section" routerLink="./home">
-      <div class="text-center pt-4">
-        <img class="profile-photo" src="assets/images/profile.JPG" />
-      </div>
-      <div class="name mt-1">
-        Kishan Kumar
-      </div>
-      <div class="role mt-2 pb-3">
-        Software Developer <br>Mumbai, India
-      </div>
-    </div>
-
-    <div class="navigation-list">
-      <div class="tab" routerLink="./home" routerLinkActive="selected">
-        Home</div>
-      <div class="tab disabled" routerLink="./education" routerLinkActive="selected">Education</div>
-      <div class="tab disabled" routerLink="./work" routerLinkActive="selected">Work</div>
-      <div class="tab disabled" routerLink="./skills" routerLinkActive="selected">Skills</div>
-      <div class="tab" routerLink="./contact" routerLinkActive="selected">Contact</div>
-    </div>
-    <div class="social-media-link">
-      <div (click)="redirect('linkedin')" class="icon">
-        <img src="assets/icons/linkedin.svg" />
-      </div>
-      <div (click)="redirect('github')" class="icon">
-        <img src="assets/icons/github.svg" />
-      </div>
-      <div (click)="redirect('hackerrank')" class="icon">
-        <img src="assets/icons/hackerrank.svg" />
-      </div>
-    </div>
-  </div>
-
   <div class="app-router-wrapper">
     <router-outlet></router-outlet>
   </div>

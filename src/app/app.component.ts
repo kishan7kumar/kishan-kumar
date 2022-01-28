@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,53 +7,24 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
-
-
 export class AppComponent {
+
   title = 'MyWebsite';
-  public getScreenWidth: any;
-  public getScreenHeight: any;
-  public isMobileDevice = false;
   public showMenu = false;
+
+  constructor(private router: Router) {
+  }
+
+  ngOnInit() {
+  }
 
   handleMenuBarClick() {
     this.showMenu = !this.showMenu;
   }
 
-  ngOnInit() {
-    // this.getScreenWidth = window.innerWidth;
-    // this.getScreenHeight = window.innerHeight;
-    // if (this.getScreenWidth < 1024) {
-    //   this.isMobileDevice = true;
-    // }
-    // if (this.getScreenWidth > 1024) {
-    //   this.isMobileDevice = false;
-    // }
-  }
-
-
-  // @HostListener('window:resize', ['$event'])
-  // onWindowResize() {
-  //   this.getScreenWidth = window.innerWidth;
-  //   this.getScreenHeight = window.innerHeight;
-  //   if (this.getScreenWidth < 1024) {
-  //     this.isMobileDevice = true;
-  //   }
-  //   if (this.getScreenWidth > 1024) {
-  //     this.isMobileDevice = false;
-  //   }
-  // }
-
-  redirect(website: any) {
-    if (website === 'linkedin') {
-      window.location.href = "https://www.linkedin.com/in/kishankumar3202";
+  handleTabClick() {
+    if (window.matchMedia("only screen and (max-width: 1024px)").matches) {
+      this.showMenu = !this.showMenu;
     }
-    if (website === 'github') {
-      window.location.href = "https://github.com/kishan7kumar";
-    }
-    if (website === 'hackerrank') {
-      window.location.href = "https://www.hackerrank.com/kishankumar3202";
-    }
-
   }
 }

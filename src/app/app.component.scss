@@ -6,15 +6,16 @@
   height: 100%;
   width: 100%;
   display: flex;
+
   .mobile-menu {
-    background-color: #000;
-    border-radius: 8px;
+    background-color: $background-dark;
+    border-radius: 4px;
     cursor: pointer;
     display: none;
     top: 10px;
     right: 10px;
     .pi {
-      color: white;
+      color: $text-white;
       font-size: 32px;
     }
     @include for-small-desktop {
@@ -32,16 +33,17 @@
     justify-content: start;
     @include for-small-desktop {
       display: none;
-    }
-
-    &.mobile-view {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: 2;
+      &.mobile-view {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+      }
+      &.showNavbar{
+        display: block;
+      }
     }
 
     .primary-section {
@@ -58,7 +60,6 @@
         height: 80px;
         width: 80px;
         border-radius: 50%;
-        border: 2px solid $text-medium;
       }
 
       .name {
@@ -131,4 +132,3 @@
     min-width: 0;
   }
 }
-
