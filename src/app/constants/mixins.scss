@@ -28,7 +28,7 @@
   }
 }
 
-@mixin primary-button($color: "#09cfff") {
+@mixin primary-button($color) {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -36,7 +36,9 @@
   height: 50px;
   border: 1px solid $color;
   width: 220px;
-  color: #eeeeee;
+  font-size: 14px;
+  font-family: $default-font;
+  color: $color;
   letter-spacing: 3px;
   position: relative;
   outline: 0;
