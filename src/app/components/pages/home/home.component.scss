@@ -27,7 +27,7 @@
     }
     .title {
       padding-left: 20px;
-      @include for-medium-mobile {
+      @include for-normal-mobile {
         padding-left: 0;
       }
       .intro-text {
@@ -58,15 +58,11 @@
       }
       .sub-title {
         font-family: $default-font;
-        font-size: 16px;
+        font-size: 18px;
         letter-spacing: 3px;
         color: $text-medium;
         margin-left: 24px;
-        margin-top: 8px;
-        @include for-normal-mobile {
-          font-size: 14px;
-          letter-spacing: normal;
-        }
+        margin-top: 8px;        
         @include for-tablet {
           letter-spacing: normal;
         }
@@ -77,9 +73,6 @@
       font-family: $dancing-font;
       font-size: 18px;
       margin: 8px 0px 0px 10px;
-      @include for-normal-mobile {
-        font-size: 18px;
-      }
     }
     .contact-me-button {
       margin-left: 24px;
@@ -87,7 +80,7 @@
       @include primary-button($blue-light);
       @include for-normal-mobile {
         width: 170px;
-        height: 40px;
+        height: 44px;
       }
     }
   }
