@@ -25,7 +25,7 @@
   }
 
   .navbar {
-    width: 130px;
+    min-width: 150px;
     height: 100%;
     background-color: $background-medium;
     display: flex;
@@ -64,8 +64,8 @@
         width: 80px;
         border-radius: 50%;
         @include for-small-desktop {
-          height: 150px;
-        width: 150px;
+          height: 110px;
+        width: 110px;
         }
       }
 
@@ -75,7 +75,7 @@
         text-align: center;
         font-family: $default-font;
         @include for-small-desktop {
-          font-size: 24px;
+          font-size: 20px;
         }
       }
 
@@ -84,7 +84,7 @@
         color: $text-medium;
         text-align: center;
         @include for-small-desktop {
-          font-size: 18px;
+          font-size: 14px;
         }
       }
     }
@@ -98,7 +98,7 @@
         cursor: pointer;
         border-bottom: 1px solid $gray10;
         @include for-small-desktop {
-          font-size: 18px;
+          font-size: 16px;
         }
 
         &:hover {
@@ -132,8 +132,8 @@
           width: 22px;
           @include for-small-desktop {
             margin-top: auto;
-            height: 40px;
-            width: 40px;
+            height: 30px;
+            width: 30px;
             margin: 0px 6px;
           }
           filter: invert(60%) sepia(0%) saturate(931%) hue-rotate(217deg) brightness(106%) contrast(88%);

@@ -1,27 +1,143 @@
-@import '../../../constants/variables.scss';
+@import "../../../constants/variables.scss";
+@import "../../../constants/mixins.scss";
 
 .education-container {
-  height: 100%;
+  background-color: $background-light;
   width: 100%;
-  padding: 40px 50px 30px 40px;
-  overflow-y: auto;
+  height: 100%;
   overflow-x: hidden;
-  background-color: #1d1d1d;
+  overflow-y: auto;
+  display: flex;
+  .wrapper {
+    margin: auto 0px;
+    padding: 20px 20px 20px 20px;
+    width: 60%;
+    @include for-small-desktop {
+      width: 80%;
+    }
+    @include for-tablet {
+      width: 100%;
+    }
+    .code-text {
+      color: $text-dark;
+      font-family: $dancing-font;
+      font-size: 18px;
+      margin: 10px 0px 0px 20px;
+      &.html-tag {
+        margin-left: 0;
+      }
+      @include for-normal-mobile {
+        margin-left: 0px;
+      }
+    }
 
-  .code-text {
-    color: #616161;
-    font-family: $dancing-font;
-    font-size: 18px;
-    margin: 0;
+    .title {
+      font-size: 64px;
+      font-family: $bold-font;
+      color: $blue-light;
+      line-height: 60px;
+      letter-spacing: -2.5px;
+      margin-left: 35px;
+      margin-top: 4px;
+      @include for-normal-mobile {
+        font-size: 48px;
+        margin-left: 35px;
+      }
+      @include for-small-mobile {
+        font-size: 42px;
+      }
+    }
 
+    .education-cards-container {
+      .undergraduation-card {
+        margin-left: 35px;
+        margin-top: 10px;
+        padding: 20px;
+        border: 2px solid $background-medium;
+        border-top-color: $yellow-light;
+        color: $text-light;
+        .card-title {
+          font-size: 18px;
+          color: $yellow-light;
+          letter-spacing: 4px;
+          margin-bottom: 16px;
+          @include for-normal-mobile {
+            letter-spacing: normal;
+            font-size: 16px;
+          }
+        }
+        .section {
+          margin-bottom: 6px;
+          font-size: 16px;
+          @include for-normal-mobile {
+            font-size: 14px;
+          }
+          .label {
+            color: $text-medium;
+            font-family: $light-font;
+          }
+        }
+      }
+
+      .higher-secondary-school-card {
+        margin-left: 35px;
+        margin-top: 20px;
+        padding: 20px;
+        border: 2px solid $background-medium;
+        border-top-color: $cyan-light;
+        color: $text-light;
+        .card-title {
+          font-size: 18px;
+          color: $cyan-light;
+          letter-spacing: 4px;
+          margin-bottom: 16px;
+          @include for-normal-mobile {
+            letter-spacing: normal;
+            font-size: 16px;
+          }
+        }
+        .section {
+          margin-bottom: 6px;
+          font-size: 16px;
+          @include for-normal-mobile {
+            font-size: 14px;
+          }
+          .label {
+            color: $text-medium;
+            font-family: $light-font;
+          }
+        }
+      }
+
+      .secondary-school-card {
+        margin-left: 35px;
+        margin-top: 20px;
+        padding: 20px;
+        border: 2px solid $background-medium;
+        border-top-color: $pink-light;
+        color: $text-light;
+        .card-title {
+          font-size: 18px;
+          color: $pink-light;
+          letter-spacing: 4px;
+          margin-bottom: 16px;
+          @include for-normal-mobile {
+            letter-spacing: normal;
+            font-size: 16px;
+          }
+        }
+        .section {
+          margin-bottom: 6px;
+          font-size: 16px;
+          @include for-normal-mobile {
+            font-size: 14px;
+          }
+          .label {
+            font-family: $light-font;
+            color: $text-medium;
+          }
+        }
+      }
+    }
   }
-
-  .title {
-    font-size: 64px;
-    font-family: $bold-font;
-    color: #09cfff;
-    line-height: 60px;
-    letter-spacing: -2.5px;
-  }
-
 }
