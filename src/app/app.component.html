@@ -1,54 +1,235 @@
 <div class="app-body-container">
-  <div class="navbar mobile-view" [class.showNavbar]="showMenu">
-    <div class="primary-section" routerLink="./home">
-      <div class="text-center pt-4">
-        <img class="profile-photo" src="assets/images/profile.JPG" />
-      </div>
-      <div class="name mt-1">
+
+  <div class="topbar">
+    <div class="navigation-tab">
+      Home</div>
+    <div class="navigation-tab">
+      Work</div>
+    <div class="navigation-tab">
+      Skills</div>
+    <div class="navigation-tab">
+      Education</div>
+    <div class="navigation-tab">
+      Contact</div>
+    <button class="resume-button">
+      Download CV
+    </button>
+  </div>
+
+
+  <div class="home-container fadein animation-duration-1000">
+    <div class="description-container ">
+      <div class="name">
         Kishan Kumar
       </div>
-      <div class="role mt-2 pb-3">
-        Software Developer <br>Mumbai, India
+      <div class="contact">
+        <span class="head">Email:</span> kishankumar3202@gmail.com
+      </div>
+      <div class="social-button">
+        <a href="https://www.linkedin.com/in/kishankumar3202">
+          <div class="icon">
+            <img src="assets/icons/linkedin.svg" />
+          </div>
+        </a>
+        <a href="https://github.com/kishan7kumar">
+          <div class="icon">
+            <img src="assets/icons/github.svg" />
+          </div>
+        </a>
+        <a href="https://www.hackerrank.com/kishankumar3202">
+          <div class="icon">
+            <img src="assets/icons/hackerrank.svg" />
+          </div>
+        </a>
+      </div>
+      <div class="about-me">
+        is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+        type specimen book. It has survived not only five centuries, but also the
+      </div>
+    </div>
+    <div class="image-container">
+      <img class="image" src="assets/images/IMG_8194.PNG">
+    </div>
+  </div>
+
+  <div class="divider-container">
+    <div class="divider">
+    </div>
+    <div class="title">
+      PROFESSIONAL EXPERIENCE
+    </div>
+  </div>
+
+  <div class="work-container">
+    <div class="description-one">
+      <div class="job-role">
+        Associate Developer
+      </div>
+      <div class="date">
+        June 2019 - Present
+      </div>
+    </div>
+    <div class="description-two">
+      <div class="comapany-name">
+        Jio Platforms Limited, Mumbai, India
+      </div>
+    </div>
+    <div class="description-three">
+      <div class="content"> <i class="pi pi-circle"></i>
+        Designed and developed Data Visualization Web Dashboards using Angular that provide tabular & graphical
+        representations of KPIs (key performance indicator) of several Jio Media Applications, which reduced 90% of
+        manual querying of data and streamlined the process of generating performance reports
+      </div>
+      <div class="content"> <i class="pi pi-circle"></i>
+        Collaborated with a team of 8 to design and develop the user interface of a work management platform using
+        Angular and PrimeNG, which allows users to plan, track and manage different projects
+      </div>
+      <div class="content"> <i class="pi pi-circle"></i>
+        Developed and deployed efficient Apache Spark applications on Kubernetes server for processing data of more than
+        10 million daily active users of popular jio media apps such as JioTV, JioNews, and JioCinema to fulfill ad-hoc
+        business requirements
+      </div>
+      <div class="content"> <i class="pi pi-circle"></i>
+        Automated code deployment by configuring continuous integration, delivery, and deployment pipelines using
+        Jenkins as an automation tool
+      </div>
+      <div class="content"> <i class="pi pi-circle"></i>
+        Trained and mentored new hires on web development fundamentals, architecture of data analytics web dashboards,
+        and code deployment automation
+      </div>
+    </div>
+    <div class="description-one mt-5">
+      <div class="job-role">
+        Intern
+      </div>
+      <div class="date">
+        June 2018 - July 2018
+      </div>
+    </div>
+    <div class="description-two">
+      <div class="comapany-name">
+        Reliance Jio Infocomm Limited, Mumbai, India
+      </div>
+    </div>
+    <div class="description-three">
+      <div class="content"> <i class="pi pi-circle"></i>
+        Assisted the quality assurance team with the overall functionality & maintenance of different types of Antennas
+        used in 4G mobile towers across the country
+      </div>
+    </div>
+  </div>
+
+  <div class="divider-container">
+    <div class="divider">
+    </div>
+    <div class="title">
+      EDUCATION
+    </div>
+  </div>
+
+
+  <div class="education-container">
+    <div class="description-one">
+      <div class="univesity-name">
+        University of Mumbai
+      </div>
+      <div class="date">
+        May 2019
+      </div>
+    </div>
+    <div class="description-two">
+      <div class="degree-name">
+        Bachelor of Engineering - Electronics & Telecommunication
+      </div>
+    </div>
+    <div class="description-three">
+      <div class="content"> <i class="pi pi-circle"></i>
+        CGPA: 8.99 / 10
+      </div>
+      <div class="content"> <i class="pi pi-circle"></i>
+        Held the position of reponsibility as a Class Representative
+      </div>
+      <div class="content"> <i class="pi pi-circle"></i>
+        Relevant Courswork:- Applied Mathematics, Structured Programming Approach, Operating System, Image and Video
+        Processing,
+        Object-Oriented Programming Methodology Lab., Microprocessors & Peripherals, Computer Communication & Telecom
+        Networks
       </div>
     </div>
 
-    <div class="navigation-list">
-      <div class="tab" routerLink="./home" (click)="handleTabClick()" routerLinkActive="selected">
-        Home</div>
-      <div class="tab" (click)="handleTabClick()" routerLink="./education" routerLinkActive="selected">
-        Education</div>
-      <div class="tab disabled" routerLink="./work" (click)="handleTabClick()" routerLinkActive="selected">Work</div>
-      <div class="tab disabled" routerLink="./skills" (click)="handleTabClick()" routerLinkActive="selected">Skills
+
+    <div class="description-one mt-5">
+      <div class="univesity-name">
+        Bal Bharathi Public School
       </div>
-      <div class="tab" routerLink="./contact" (click)="handleTabClick()" routerLinkActive="selected">
-        Contact</div>
+      <div class="date">
+        May 2014
+      </div>
+    </div>
+    <div class="description-two">
+      <div class="degree-name">
+        Senior School Certificate Examination / 12th Standard (CBSE)
+      </div>
+    </div>
+    <div class="description-three">
+      <div class="content"> <i class="pi pi-circle"></i>
+        Percentage: 86.4 / 100
+      </div>
+
+      <div class="content"> <i class="pi pi-circle"></i>
+        Relevant Courswork:-Physics, Mathematics, Chemistry, Computer Science
+      </div>
     </div>
 
-    <div class="social-media-link">
-      <a href="https://www.linkedin.com/in/kishankumar3202">
-        <div class="icon">
-          <img src="assets/icons/linkedin.svg" />
-        </div>
-      </a>
-      <a href="https://github.com/kishan7kumar">
-        <div class="icon">
-          <img src="assets/icons/github.svg" />
-        </div>
-      </a>
-      <a href="https://www.hackerrank.com/kishankumar3202">
-        <div class="icon">
-          <img src="assets/icons/hackerrank.svg" />
-        </div>
-      </a>
 
+    <div class="description-one mt-5">
+      <div class="univesity-name">
+        Bal Bharathi Public School
+      </div>
+      <div class="date">
+        May 2014
+      </div>
     </div>
-  </div>
-  <div class="app-router-wrapper">
-    <router-outlet></router-outlet>
+    <div class="description-two">
+      <div class="degree-name">
+        Secondary School Examination / 10th Standard (CBSE)
+      </div>
+    </div>
+    <div class="description-three">
+      <div class="content"> <i class="pi pi-circle"></i>
+        CGPA: 8.99/10
+      </div>
+      <div class="content"> <i class="pi pi-circle"></i>
+        Relevant Courswork:- Mathematics, Science
+      </div>
+    </div>
+
+
+
+
   </div>
 
-  <div (click)="handleMenuBarClick()" class="mobile-menu absolute pt-2 pb-1 px-2">
-    <i class="pi" [class.pi-bars]="!showMenu" [class.pi-times]="showMenu"></i>
-  </div>
+
+
+
+  <p-button icon="pi pi-bars" (onClick)="handleMenuBarClick()" styleClass="p-button-rounded p-button-text menu-icon"></p-button>
+
 
 </div>
+
+
+<p-sidebar [(visible)]="showMenu" position="right" [baseZIndex]="10000">
+  <h3>Right Sidebar</h3>
+</p-sidebar>
+
+
+
+
+
+
+
+
+<!-- <div class="app-router-wrapper col-12">
+      <router-outlet></router-outlet>
+    </div> -->

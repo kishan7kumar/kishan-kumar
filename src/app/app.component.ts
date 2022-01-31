@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +13,11 @@ export class AppComponent {
   title = 'MyWebsite';
   public showMenu = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private primengConfig: PrimeNGConfig) {
   }
 
   ngOnInit() {
+    this.primengConfig.ripple = true;
   }
 
   handleMenuBarClick() {
