@@ -3,23 +3,23 @@
 
 .app-body-container {
   position: relative;
-  height: 100%;
-  width: 100%;
   padding: 20px 40px;
   @include for-normal-mobile {
-    padding: 60px 20px 30px 20px;
+    padding: 20px;
   }
-  overflow-y: auto;
   overflow-x: hidden;
   ::ng-deep {
     .menu-icon.p-button {
       position: absolute;
-      top: 16px;
-      right: 16px;
+      top: 12px;
+      right: 12px;
       display: none;
+      padding: 16px;
+      height: 4rem;
+      width: 4rem;
       .pi {
-        color: blue;
-        font-size: 24px;
+        color: $blue-dark;
+        font-size: 32px;
       }
       @include for-normal-mobile {
         display: block;
@@ -33,44 +33,44 @@
       display: none;
     }
     justify-content: end;
-    .navigation-tab {
-      padding: 12px 16px;
-      font-family: $medium-font;
-      font-size: 16px;
-      cursor: pointer;
-      &:hover {
-        color: blue;
+
+    ::ng-deep {
+      .navigation-tab.p-button {
+        font-family: $medium-font;
+        color: $text-darker;
+        &:hover {
+          color: $blue-dark;
+        }
       }
-    }
-    .resume-button {
-      background-color: blue;
-      color: $text-white;
-      border: none;
-      font-family: $default-font;
-      padding: 12px 20px;
-      margin-left: 16px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color linear 0.4s;
-      &:hover {
-        background-color: $background-medium;
+      .p-button.resume-button {
+        background-color: $blue-dark;
+        border: none;
+        font-family: $default-font;
+        margin-left: 16px;
+        transition: background-color linear 0.4s;
+        &:hover {
+          background-color: $background-medium;
+        }
       }
     }
   }
   .home-container {
     display: flex;
-    // height: 100%;
     width: 100%;
-    @include for-normal-mobile {
+    @include for-small-desktop {
+      margin-top: 100px;
+    }
+    @include for-tablet {
       flex-direction: column;
       justify-content: center;
+      margin-top: 100px;
     }
     .description-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       width: 50%;
-      @include for-normal-mobile {
+      @include for-tablet {
         width: 100%;
       }
       .name {
@@ -78,8 +78,13 @@
         line-height: 80px;
         font-family: $default-font;
         color: $text-darker;
+        @include for-small-desktop {
+          font-size: 64px;
+          line-height: normal;
+        }
         @include for-normal-mobile {
-          font-size: 48px;
+          font-size: 33px;
+          line-height: normal;
         }
       }
       .contact {
@@ -87,6 +92,9 @@
         font-size: 18px;
         font-family: $default-font;
         color: $text-darker;
+        @include for-normal-mobile {
+          font-size: 16px;
+        }
         .head {
           font-family: $bold-font;
         }
@@ -94,11 +102,16 @@
 
       .social-button {
         margin-top: 20px;
+        margin-left: -14px;
         display: flex;
-        .icon {
-          margin-right: 8px;
-          &:hover {
-            filter: invert(55%) sepia(66%) saturate(1002%) hue-rotate(161deg) brightness(106%) contrast(110%);
+        ::ng-deep {
+          .p-button-rounded.p-button-text {
+            min-width: 0;
+            &:hover {
+              img {
+                filter: invert(17%) sepia(97%) saturate(2944%) hue-rotate(232deg) brightness(116%) contrast(99%);
+              }
+            }
           }
         }
       }
@@ -109,7 +122,7 @@
         line-height: 30px;
         color: $text-dark;
         @include for-normal-mobile {
-          font-size: 18px;
+          font-size: 16px;
           line-height: 22px;
         }
       }
@@ -119,7 +132,7 @@
       justify-content: center;
       align-items: center;
       width: 50%;
-      @include for-normal-mobile {
+      @include for-tablet {
         width: 100%;
       }
       .image {
@@ -133,15 +146,19 @@
   }
 
   .divider-container {
-    margin: 60px 0px 20px 0px;
+    margin: 100px 0px 40px 0px;
     .divider {
-      background-color: blue;
+      background-color: $blue-dark;
       height: 1px;
     }
     .title {
       margin-top: 16px;
-      color: blue;
-      font-weight: 600;
+      color: $blue-dark;
+      font-family: $bold-font;
+      letter-spacing: 2px;
+      @include for-normal-mobile {
+        letter-spacing: normal;
+      }
     }
   }
 
@@ -153,17 +170,17 @@
         flex-direction: column;
       }
       .job-role {
-        font-size: 32px;
+        font-size: 30px;
         font-family: $default-font;
-        color: $text-dark;
+        color: $text-darker;
         @include for-normal-mobile {
-          font-size: 28px;
+          font-size: 22px;
         }
       }
       .date {
-        font-size: 32px;
+        font-size: 30px;
         font-family: $default-font;
-        color: $text-dark;
+        color: $text-darker;
         @include for-normal-mobile {
           font-size: 16px;
         }
@@ -171,34 +188,49 @@
     }
     .description-two {
       .comapany-name {
-        margin-top: 10px;
-        font-size: 18px;
+        margin-bottom: 20px;
+        font-size: 20px;
         font-family: $light-font;
         color: $text-darker;
-      }
-    }
-    .description-three {
-      .content {
-        font-size: 18px;
         @include for-normal-mobile {
           font-size: 16px;
         }
-        display: flex;
-        align-items: start;
-        margin: 10px 0px;
+      }
+    }
+    .description-three {
+      margin-left: -20px;
+      .content {
+        font-size: 20px;
+        margin-bottom: 20px;
+        list-style: disc;
         font-family: $default-font;
         color: $text-dark;
-        .pi {
-          margin-top: 8px;
-          margin-right: 8px;
-          font-weight: 800;
-          font-size: 8px;
-          color: blue;
+        @include for-normal-mobile {
+          font-size: 16px;
         }
       }
     }
   }
 
+
+  .skills-container{
+    .section{
+      font-size: 20px;
+      margin-bottom: 16px;
+      color: $text-dark;
+      font-family: $default-font;
+      @include for-normal-mobile {
+        font-size: 16px;
+      }
+      .header{
+        font-family: $bold-font;
+      }
+    }
+  }
+
+
+
+  // EDUCATION CONTAINER
   .education-container {
     .description-one {
       display: flex;
@@ -207,17 +239,17 @@
         flex-direction: column;
       }
       .univesity-name {
-        font-size: 32px;
+        font-size: 30px;
         font-family: $default-font;
-        color: $text-dark;
+        color: $text-darker;
         @include for-normal-mobile {
-          font-size: 28px;
+          font-size: 22px;
         }
       }
       .date {
-        font-size: 32px;
+        font-size: 30px;
         font-family: $default-font;
-        color: $text-dark;
+        color: $text-darker;
         @include for-normal-mobile {
           font-size: 16px;
         }
@@ -225,31 +257,80 @@
     }
     .description-two {
       .degree-name {
-        margin-top: 10px;
-        font-size: 18px;
+        margin-bottom: 20px;
+        font-size: 20px;
         font-family: $light-font;
         color: $text-darker;
-      }
-    }
-    .description-three {
-      .content {
-        font-size: 18px;
         @include for-normal-mobile {
           font-size: 16px;
         }
-        display: flex;
-        align-items: start;
-        margin: 10px 0px;
+      }
+    }
+    .description-three {
+      margin-left: -20px;
+      .content {
+        font-size: 20px;
+        list-style: disc;
+        margin-bottom: 20px;
         font-family: $default-font;
         color: $text-dark;
-        .pi {
-          margin-top: 8px;
-          margin-right: 8px;
-          font-weight: 800;
-          font-size: 8px;
-          color: blue;
+        @include for-normal-mobile {
+          font-size: 16px;
         }
       }
+    }
+  }
+
+  .contact-container{
+    .description{
+      font-size: 20px;
+      color: $text-dark;
+      font-family: $default-font;
+      @include for-normal-mobile {
+        font-size: 16px;
+      }
+    }
+    .contact {
+      margin-top: 16px;
+      font-size: 20px;
+      color: $text-darker;
+      font-family: $light-font;
+      @include for-normal-mobile {
+        font-size: 16px;
+      }
+      .header{
+        font-size: 30px;
+        color: $text-dark;
+        font-family: $default-font;
+        @include for-normal-mobile {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .social-button {
+      margin-top: 20px;
+      margin-left: -14px;
+      display: flex;
+      ::ng-deep {
+        .p-button-rounded.p-button-text {
+          min-width: 0;
+          &:hover {
+            img {
+              filter: invert(17%) sepia(97%) saturate(2944%) hue-rotate(232deg) brightness(116%) contrast(99%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright{
+    font-size: 20px;
+    font-family: $default-font;
+    color: $text-darker;
+    @include for-normal-mobile{
+      font-size: 16px;
     }
   }
 }

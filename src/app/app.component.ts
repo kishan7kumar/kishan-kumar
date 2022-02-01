@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
+import { ViewportScroller } from "@angular/common";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   title = 'MyWebsite';
   public showMenu = false;
 
-  constructor(private router: Router, private primengConfig: PrimeNGConfig) {
+  constructor(private router: Router, private primengConfig: PrimeNGConfig, private scroller: ViewportScroller) {
   }
 
   ngOnInit() {
@@ -29,4 +30,13 @@ export class AppComponent {
       this.showMenu = !this.showMenu;
     }
   }
+
+  handlleSocialButtonClick(url:string){
+    window.open(
+      url,
+      '_blank'
+    )
+  }
+
+ 
 }

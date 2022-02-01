@@ -20,6 +20,7 @@ import { BadgeModule } from 'primeng/badge';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { RippleModule } from 'primeng/ripple';
+import {ScrollPanelModule} from 'primeng/scrollpanel';
 import { PasswordModule } from 'primeng/password';
 import { ToastModule } from 'primeng/toast';
 import { TableModule } from 'primeng/table';
@@ -48,6 +49,7 @@ import { TieredMenuModule } from 'primeng/tieredmenu';
 		CalendarModule,
 		TabMenuModule,
 		MenuModule,
+		ScrollPanelModule,
 		TieredMenuModule,
 		SkeletonModule,
 		ScrollTopModule,
@@ -66,6 +68,7 @@ import { TieredMenuModule } from 'primeng/tieredmenu';
 		TooltipModule,
 		SelectButtonModule,
 		FormsModule,
+		ScrollPanelModule,
 		ReactiveFormsModule,
 		MultiSelectModule,
 		CardModule,

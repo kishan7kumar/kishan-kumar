@@ -3,27 +3,27 @@
 @import "./app/constants/variables.scss";
 
 @font-face {
-  font-family: 'OpenSansLight';
+  font-family: "OpenSansLight";
   src: url("assets/fonts/OpenSans-Light.ttf");
 }
 
 @font-face {
-  font-family: 'OpenSans';
+  font-family: "OpenSans";
   src: url("assets/fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'OpenSansMedium';
+  font-family: "OpenSansMedium";
   src: url("assets/fonts/OpenSans-Medium.ttf");
 }
 
 @font-face {
-  font-family: 'OpenSansBold';
+  font-family: "OpenSansBold";
   src: url("assets/fonts/OpenSans-Bold.ttf");
 }
 
 @font-face {
-  font-family: 'OpenSansExtraBold';
+  font-family: "OpenSansExtraBold";
   src: url("assets/fonts/OpenSans-ExtraBold.ttf");
 }
 
@@ -49,4 +49,38 @@ body {
   padding: 0;
   position: relative;
   overflow: hidden;
+}
+
+.p-scrolltop.p-link {
+  background: white;
+  border: 1px solid $blue-dark;
+  box-shadow: none;
+  &:focus{
+    box-shadow: none;
+  }
+  &:hover{
+    background:none;
+  }
+  .pi{
+    color: $blue-dark;
+  }
+  
+  // &:hover {
+  //   background-color: $blue-dark;
+  // }
+}
+.p-scrollpanel {
+  &.custombar1 {
+    .p-scrollpanel-wrapper {
+      border-right: 9px solid var(--layer-1);
+    }
+    .p-scrollpanel-bar {
+      background-color: $gray6;
+      opacity: 1;
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: $blue-light;
+      }
+    }
+  }
 }
