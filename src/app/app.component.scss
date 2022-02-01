@@ -88,12 +88,13 @@
         }
       }
       .contact {
-        margin-top: 10px;
+        margin-top: 20px;
         font-size: 18px;
         font-family: $default-font;
         color: $text-darker;
         @include for-normal-mobile {
           font-size: 16px;
+          margin-top: 10px;
         }
         .head {
           font-family: $bold-font;
@@ -102,6 +103,9 @@
 
       .social-button {
         margin-top: 20px;
+        @include for-normal-mobile {
+          margin-top: 10px;
+        }
         margin-left: -14px;
         display: flex;
         ::ng-deep {
@@ -124,6 +128,7 @@
         @include for-normal-mobile {
           font-size: 16px;
           line-height: 22px;
+          margin-top: 10px;
         }
       }
     }
@@ -212,9 +217,8 @@
     }
   }
 
-
-  .skills-container{
-    .section{
+  .skills-container {
+    .section {
       font-size: 20px;
       margin-bottom: 16px;
       color: $text-dark;
@@ -222,13 +226,11 @@
       @include for-normal-mobile {
         font-size: 16px;
       }
-      .header{
+      .header {
         font-family: $bold-font;
       }
     }
   }
-
-
 
   // EDUCATION CONTAINER
   .education-container {
@@ -281,8 +283,8 @@
     }
   }
 
-  .contact-container{
-    .description{
+  .contact-container {
+    .description {
       font-size: 20px;
       color: $text-dark;
       font-family: $default-font;
@@ -298,9 +300,9 @@
       @include for-normal-mobile {
         font-size: 16px;
       }
-      .header{
+      .header {
         font-size: 30px;
-        color: $text-dark;
+        color: $text-darker;
         font-family: $default-font;
         @include for-normal-mobile {
           font-size: 20px;
@@ -310,36 +312,39 @@
 
     .social-button {
       margin-top: 20px;
-      margin-left: -14px;
       display: flex;
       ::ng-deep {
-        .p-button-rounded.p-button-text {
+        .p-button-rounded.p-button-outlined {
           min-width: 0;
-          &:hover {
-            img {
-              filter: invert(17%) sepia(97%) saturate(2944%) hue-rotate(232deg) brightness(116%) contrast(99%);
-            }
+          margin-right: 16px;
+          .blue {
+            filter: invert(17%) sepia(97%) saturate(2944%) hue-rotate(232deg) brightness(116%) contrast(99%);
+          }
+          .pink {
+            filter: invert(32%) sepia(99%) saturate(1250%) hue-rotate(315deg) brightness(105%) contrast(103%);
+          }
+          .green {
+            filter: invert(54%) sepia(63%) saturate(467%) hue-rotate(49deg) brightness(91%) contrast(80%);
           }
         }
       }
     }
   }
 
-  .copyright{
+  .copyright {
     font-size: 20px;
     font-family: $default-font;
     color: $text-darker;
-    @include for-normal-mobile{
+    @include for-normal-mobile {
       font-size: 16px;
     }
   }
 }
 
-
-::ng-deep{
-  .mobile-navigation-sidebar{
-    .p-sidebar-header{
-      .p-sidebar-icon{
+::ng-deep {
+  .mobile-navigation-sidebar {
+    .p-sidebar-header {
+      .p-sidebar-icon {
         height: 4rem;
         width: 4rem;
         .pi {
@@ -347,11 +352,10 @@
           font-size: 32px;
         }
       }
-      
     }
-    .p-sidebar-content{
+    .p-sidebar-content {
       height: 100%;
-      .navigation-list{
+      .navigation-list {
         display: flex;
         flex-direction: column;
         text-align: center;
