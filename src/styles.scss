@@ -55,19 +55,17 @@ body {
   background: white;
   border: 1px solid $blue-dark;
   box-shadow: none;
-  &:focus{
+  height: 3rem;
+  width: 3rem;
+  &:focus {
     box-shadow: none;
   }
-  &:hover{
-    background:none;
+  &:hover {
+    background: white;
   }
-  .pi{
+  .pi {
     color: $blue-dark;
   }
-  
-  // &:hover {
-  //   background-color: $blue-dark;
-  // }
 }
 .p-scrollpanel {
   &.custombar1 {

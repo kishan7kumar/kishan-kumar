@@ -83,7 +83,7 @@
           line-height: normal;
         }
         @include for-normal-mobile {
-          font-size: 33px;
+          font-size: 36px;
           line-height: normal;
         }
       }
@@ -331,6 +331,51 @@
     color: $text-darker;
     @include for-normal-mobile{
       font-size: 16px;
+    }
+  }
+}
+
+
+::ng-deep{
+  .mobile-navigation-sidebar{
+    .p-sidebar-header{
+      .p-sidebar-icon{
+        height: 4rem;
+        width: 4rem;
+        .pi {
+          color: $blue-dark;
+          font-size: 32px;
+        }
+      }
+      
+    }
+    .p-sidebar-content{
+      height: 100%;
+      .navigation-list{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .navigation-tab.p-button {
+          margin-bottom: 10px;
+          font-family: $default-font;
+          font-size: 20px;
+          width: 120px;
+          color: $text-dark;
+          &:hover {
+            color: $blue-dark;
+          }
+        }
+        .p-button.resume-button {
+          background-color: $blue-dark;
+          border: none;
+          font-size: 20px;
+          font-family: $default-font;
+          transition: background-color linear 0.4s;
+          &:hover {
+            background-color: $background-medium;
+          }
+        }
+      }
     }
   }
 }

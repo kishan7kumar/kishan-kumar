@@ -3,14 +3,14 @@
     <p-button icon="pi pi-bars" (onClick)="handleMenuBarClick()" styleClass="p-button-rounded p-button-text menu-icon">
     </p-button>
     <div class="topbar">
-      <p-button label="Home" styleClass="p-button-text navigation-tab"></p-button>
-      <p-button label="Work" styleClass="p-button-text navigation-tab"></p-button>
-      <p-button label="Skills" styleClass="p-button-text navigation-tab"></p-button>
-      <p-button label="Education" styleClass="p-button-text navigation-tab"></p-button>
-      <p-button label="Contact" styleClass="p-button-text navigation-tab"></p-button>
-      <p-button styleClass="resume-button" label="Download CV"></p-button>
+      <p-button label="About" styleClass="p-button-text navigation-tab"></p-button>
+      <p-button label="Work" (onClick)="scroll(target2)" styleClass="p-button-text navigation-tab"></p-button>
+      <p-button label="Skills" (onClick)="scroll(target3)" styleClass="p-button-text navigation-tab"></p-button>
+      <p-button label="Education" (onClick)="scroll(target4)" styleClass="p-button-text navigation-tab"></p-button>
+      <p-button label="Contact" (onClick)="scroll(target5)" styleClass="p-button-text navigation-tab"></p-button>
+      <p-button styleClass="resume-button" (onClick)="downloadCV()" label="Download CV"></p-button>
     </div>
-    <div class="home-container fadein animation-duration-1000">
+    <div class="home-container fadein animation-duration-1000" #target1>
       <div class="description-container ">
         <div class="name">
           Kishan Kumar
@@ -52,7 +52,7 @@
 
 
     <!-- WORK EXPERIENCE -->
-    <div class="divider-container">
+    <div class="divider-container" #target2>
       <div class="divider">
       </div>
       <div class="title">
@@ -130,7 +130,7 @@
 
 
     <!-- SKILLS & CERTIFICATIONS -->
-    <div class="divider-container">
+    <div class="divider-container" #target3>
       <div class="divider">
       </div>
       <div class="title">
@@ -159,7 +159,7 @@
 
 
     <!-- EDUCATION -->
-    <div class="divider-container">
+    <div class="divider-container" #target4>
       <div class="divider">
       </div>
       <div class="title">
@@ -250,7 +250,7 @@
 
 
     <!-- CONTACT -->
-    <div class="divider-container">
+    <div class="divider-container" #target5>
       <div class="divider">
       </div>
       <div class="title">
@@ -302,6 +302,17 @@
 
 </p-scrollPanel>
 
-<p-sidebar [(visible)]="showMenu" position="right" [baseZIndex]="10000">
-  <h3>Right Sidebar</h3>
+<p-sidebar [style]="{width:'50%'}" [(visible)]="showMenu" styleClass="mobile-navigation-sidebar" position="right"
+  [baseZIndex]="10000">
+
+  <div class="navigation-list">
+    <p-button label="About" (onClick)="scroll(target1)" styleClass="p-button-text navigation-tab"></p-button>
+    <p-button label="Work" (onClick)="scroll(target2)" styleClass="p-button-text navigation-tab"></p-button>
+    <p-button label="Skills" (onClick)="scroll(target3)" styleClass="p-button-text navigation-tab"></p-button>
+    <p-button label="Education" (onClick)="scroll(target4)" styleClass="p-button-text navigation-tab"></p-button>
+    <p-button label="Contact" (onClick)="scroll(target5)" styleClass="p-button-text navigation-tab"></p-button>
+    <p-button styleClass="resume-button" (onClick)="downloadCV()" label="Download CV"></p-button>
+
+  </div>
+
 </p-sidebar>
