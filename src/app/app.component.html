@@ -1,6 +1,7 @@
 <p-scrollPanel [style]="{width: '100%', height: '100%'}" styleClass="custombar1">
   <div class="app-body-container">
-    <p-button icon="pi pi-bars" (onClick)="handleMenuBarClick()" styleClass="p-button-rounded p-button-text menu-icon">
+    <p-button icon="pi pi-bars" (onClick)="handleMenuBarClick()"
+      styleClass="p-button-rounded p-button-raised menu-icon">
     </p-button>
     <div class="topbar">
       <p-button label="About" styleClass="p-button-text navigation-tab"></p-button>
@@ -10,7 +11,7 @@
       <p-button label="Contact" (onClick)="scroll(target5)" styleClass="p-button-text navigation-tab"></p-button>
       <p-button styleClass="resume-button" (onClick)="downloadCV()" label="Download CV"></p-button>
     </div>
-    <div class="home-container fadein animation-duration-1000" #target1>
+    <div class="home-container" #target1>
       <div class="description-container ">
         <div class="name">
           Kishan Kumar
@@ -39,13 +40,13 @@
           </p-button>
         </div>
         <div class="about-me">
-          Hi, there I am Kishan Kumar, currently working as a software developer in Jio Platforms Limited, third largest
-          mobile network operator in the world. I have more than two years of experience in Web Development technolgies
-          like HTML, CSS, Javascript, and Angular. I also have experience in Data Engineering technolgies like Scala,
-          Hadoop and SQL.
+          Hi, there I am Kishan Kumar, currently working as a software developer in Jio Platforms Limited, the
+          third-largest mobile network operator in the world. I have more than two years of experience in Web
+          Development technologies like HTML, CSS, Javascript, and Angular. I also have experience in Data Engineering
+          technologies like Scala, Hadoop, and SQL.
         </div>
       </div>
-      <div class="image-container">
+      <div class="image-container  fadein animation-duration-1000">
         <img class="image" src="assets/images/IMG_8194.PNG">
       </div>
     </div>
@@ -189,7 +190,8 @@
             Held the position of reponsibility as a Class Representative
           </li>
           <li class="content">
-            Relevant Courswork: Applied Mathematics, Structured Programming Approach, Operating System, Image and Video
+            <i>Relevant Coursework</i>: Applied Mathematics, Structured Programming Approach, Operating System, Image
+            and Video
             Processing,
             Object-Oriented Programming Methodology Lab., Microprocessors & Peripherals, Computer Communication &
             Telecom
@@ -217,7 +219,7 @@
             Percentage: 86.4/100
           </li>
           <li class="content">
-            Relevant Courswork: Physics, Mathematics, Chemistry, Computer Science
+            <i>Relevant Coursework</i>: Physics, Mathematics, Chemistry, Computer Science
           </li>
         </ul>
       </div>
@@ -242,7 +244,7 @@
             CGPA: 8.99/10
           </li>
           <li class="content">
-            Relevant Courswork: Mathematics, Science
+            <i>Relevant Coursework</i>: Mathematics, Science
           </li>
         </ul>
       </div>
@@ -259,32 +261,40 @@
     </div>
     <div class="contact-container">
       <div class="description">
-        I'm interested in full time Frontend/UI Developer Role - especially ambitious or large-scale project that has
-        the potential to create meaningful impact on people. If you have other request or question, feel free to connect
-        with me.
+        I'm interested in a full-time Frontend/UI Developer Role - especially ambitious or large-scale project that has
+        the potential to create a meaningful impact on people. If you have other requests or questions, feel free to
+        connect with me.
       </div>
-      <div class="contact">
-        <span class="header">Email</span> <br>kishankumar3202@gmail.com
-      </div>
+      <!-- <div class="contact">
+        <span class="header">Email</span> <br><a
+          href="mailto:kishankumar3202@gmail.com">kishankumar3202@gmail.com</a>
+      </div> -->
       <div class="social-button">
-        <p-button (onClick)="handlleSocialButtonClick('https://www.linkedin.com/in/kishankumar3202')"
+        <p-button pTooltip="Linkedin" tooltipPosition="bottom" (onClick)="handlleSocialButtonClick('https://www.linkedin.com/in/kishankumar3202')"
           styleClass="p-button-outlined p-button-rounded ">
           <ng-template pTemplate="content">
             <img alt="logo" class="blue" src="assets/icons/linkedin.svg" />
           </ng-template>
         </p-button>
-        <p-button (onClick)="handlleSocialButtonClick('https://github.com/kishan7kumar')"
+        <p-button pTooltip="GitHub" tooltipPosition="bottom" (onClick)="handlleSocialButtonClick('https://github.com/kishan7kumar')"
           styleClass="p-button-rounded p-button-outlined p-button-secondary">
           <ng-template pTemplate="content">
             <img alt="logo" class="pink" src="assets/icons/github.svg" />
           </ng-template>
         </p-button>
-        <p-button (onClick)="handlleSocialButtonClick('https://www.hackerrank.com/kishankumar3202')"
+        <p-button pTooltip="HackerRank" tooltipPosition="bottom" (onClick)="handlleSocialButtonClick('https://www.hackerrank.com/kishankumar3202')"
           styleClass="p-button-rounded p-button-outlined p-button-success">
           <ng-template pTemplate="content">
             <img alt="logo" class="green" src="assets/icons/hackerrank.svg" />
           </ng-template>
         </p-button>
+        <p-button pTooltip="Email" tooltipPosition="bottom" (onClick)="handlleSocialButtonClick('mailto:kishankumar3202@gmail.com')"
+        styleClass="p-button-rounded p-button-outlined p-button-danger">
+        <ng-template pTemplate="content">
+          <img alt="logo"  class="orange" src="assets/icons/email.svg" />
+        </ng-template>
+      </p-button>
+
       </div>
     </div>
 
@@ -298,7 +308,7 @@
 
   </div>
 
-  <p-scrollTop target="parent" styleClass="scrollTopButton"></p-scrollTop>
+  <p-scrollTop icon="pi pi-arrow-up" target="parent" styleClass="scrollTopButton"></p-scrollTop>
 
 </p-scrollPanel>
 

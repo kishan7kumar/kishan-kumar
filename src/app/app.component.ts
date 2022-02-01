@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
+import { HostListener } from '@angular/core';
 
 
 @Component({
@@ -33,6 +34,13 @@ export class AppComponent {
     window.open(
       "assets/Kishan_Kumar.pdf"
     )
+  }
+
+  @HostListener('window:scroll') onScroll(e: Event): void {
+    console.log(this.getYPosition(e));
+  }
+  getYPosition(e: Event): number {
+    return (e.target as Element).scrollTop;
   }
 
   handleTabClick() {

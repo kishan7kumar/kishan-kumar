@@ -52,19 +52,11 @@ body {
 }
 
 .p-scrolltop.p-link {
-  background: white;
-  border: 1px solid $blue-dark;
-  box-shadow: none;
-  height: 3rem;
-  width: 3rem;
-  &:focus {
-    box-shadow: none;
-  }
+  background: $blue-light;
+  height: 3.5rem;
+  width: 3.5rem;
   &:hover {
-    background: white;
-  }
-  .pi {
-    color: $blue-dark;
+    background: #536dfede;
   }
 }
 .p-scrollpanel {
@@ -73,7 +65,7 @@ body {
       border-right: 9px solid var(--layer-1);
     }
     .p-scrollpanel-bar {
-      background-color: $gray6;
+      background-color: $gray5;
       opacity: 1;
       transition: background-color 0.2s;
       &:hover {

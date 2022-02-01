@@ -11,14 +11,17 @@
   ::ng-deep {
     .menu-icon.p-button {
       position: absolute;
+      background: $blue-light;
       top: 12px;
       right: 12px;
       display: none;
       padding: 16px;
       height: 4rem;
       width: 4rem;
+      &:hover {
+        background: $blue-dark;
+      }
       .pi {
-        color: $blue-dark;
         font-size: 32px;
       }
       @include for-normal-mobile {
@@ -125,6 +128,8 @@
         font-size: 20px;
         line-height: 30px;
         color: $text-dark;
+        text-align: justify;
+        text-justify: inter-word;
         @include for-normal-mobile {
           font-size: 16px;
           line-height: 22px;
@@ -179,7 +184,7 @@
         font-family: $default-font;
         color: $text-darker;
         @include for-normal-mobile {
-          font-size: 22px;
+          font-size: 24px;
         }
       }
       .date {
@@ -188,6 +193,7 @@
         color: $text-darker;
         @include for-normal-mobile {
           font-size: 16px;
+          margin: 10px 0px;
         }
       }
     }
@@ -208,6 +214,8 @@
         font-size: 20px;
         margin-bottom: 20px;
         list-style: disc;
+        text-align: justify;
+        text-justify: inter-word;
         font-family: $default-font;
         color: $text-dark;
         @include for-normal-mobile {
@@ -245,7 +253,7 @@
         font-family: $default-font;
         color: $text-darker;
         @include for-normal-mobile {
-          font-size: 22px;
+          font-size: 24px;
         }
       }
       .date {
@@ -254,6 +262,7 @@
         color: $text-darker;
         @include for-normal-mobile {
           font-size: 16px;
+          margin: 10px 0px;
         }
       }
     }
@@ -288,6 +297,8 @@
       font-size: 20px;
       color: $text-dark;
       font-family: $default-font;
+      text-align: justify;
+      text-justify: inter-word;
       @include for-normal-mobile {
         font-size: 16px;
       }
@@ -325,6 +336,9 @@
           }
           .green {
             filter: invert(54%) sepia(63%) saturate(467%) hue-rotate(49deg) brightness(91%) contrast(80%);
+          }
+          .orange {
+            filter: invert(24%) sepia(49%) saturate(2390%) hue-rotate(336deg) brightness(108%) contrast(101%);
           }
         }
       }
