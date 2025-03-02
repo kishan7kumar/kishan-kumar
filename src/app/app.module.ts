@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PrimengModule } from './modules/primeng/primeng.module';
+
 
 @NgModule({
   declarations: [
@@ -12,9 +12,7 @@ import { PrimengModule } from './modules/primeng/primeng.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    PrimengModule
-
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
